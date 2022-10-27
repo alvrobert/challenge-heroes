@@ -20,7 +20,7 @@ Si se desea levantar un contenedor con el proyecto se deben ejecutar los siguien
 
   * En la raiz del proyecto ejecutar: docker build -t client-service:v1 .
 y para ejecutar la imagen en el contenedor, ejecutar el siguiente comando:
-  * docker run -p 8888:8888 --name client-service. 
+  * docker run --rm -d  -p 8080:8080/tcp client-service:v1
 
 Esto levantara el proyecto en un contedor expuesto en el puerto 8888
 
