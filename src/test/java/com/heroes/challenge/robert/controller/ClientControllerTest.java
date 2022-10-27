@@ -37,11 +37,16 @@ class ClientControllerTest {
     @MockBean
     ClientService clientService;
 
+
+
+    @BeforeEach
+    void setUp() {
+    }
+
     @Test
-    private void getClientByDocument() throws Exception {
+    void testGetClientByDocument() throws Exception {
         when(clientService.getClientByDocument(any())).thenReturn(ClientResponseDTOFixture.withDefaults());
         mvc.perform(get("/client/client/1").contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk());
     }
-
 }

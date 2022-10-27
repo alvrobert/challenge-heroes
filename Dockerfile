@@ -1,5 +1,5 @@
-FROM openjdk:8-jre-alpine
-ADD target/challengue-0.0.1-*.jar client-service.jar
-
-EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "/client-service.jar", "--server.port=8080"]
+FROM openjdk:11
+VOLUME /tmp
+EXPOSE 8888
+ADD ./target/challengue-0.0.1-SNAPSHOT.jar client-service.jar
+ENTRYPOINT ["java", "-jar", "/client-service.jar"]
