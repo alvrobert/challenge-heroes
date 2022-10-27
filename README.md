@@ -12,10 +12,19 @@ Las herramientas que se usaron para la constuccion del mismo son las siguientes:
 
 Para poder correr el proyecto localmente se puede realziar a travez de ejecucion de un contenedor de docker o localmente con el uso de un ide
 
-Para compilar el proyecto se debe ejecutar el siguiente comando :  mvn package install
-Si se desea levantar un contenedor con el proyecto se deben ejecutar los siguientes comandos
+Para compilar el proyecto se debe ejecutar el siguiente comando :  
 
-en la raiz del proyecto ejecutar docker build -t client-service:v1 .
-y para ejecutar la imagen en el contenedor, ejecutar el siguiente comando: docker run -p 8888:8888 --name client-service. 
-esto levantara el proyecto en un contedor expuesto en el puerto 8888
+ * mvn package install
 
+Si se desea levantar un contenedor con el proyecto se deben ejecutar los siguientes comandos:
+
+  * En la raiz del proyecto ejecutar: docker build -t client-service:v1 .
+y para ejecutar la imagen en el contenedor, ejecutar el siguiente comando:
+  * docker run -p 8888:8888 --name client-service. 
+
+Esto levantara el proyecto en un contedor expuesto en el puerto 8888
+
+# Documentacion
+
+Se genero un swagger para poder tener a la mano la documentacion de los diferentes servicios implementados,
+la url del swagger es: http://localhost:8080/swagger-ui/#/client-controller
