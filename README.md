@@ -28,3 +28,7 @@ Esto levantara el proyecto en un contedor expuesto en el puerto 8888
 
 Se genero un swagger para poder tener a la mano la documentacion de los diferentes servicios implementados,
 la url del swagger es: http://localhost:8080/swagger-ui/#/client-controller
+
+El proyecto se encuentra deployado en Heroku donde la url base es : https://heroes-client-service.herokuapp.com
+
+Para ingresar al swagger desplegado es con la siguiente url: https://heroes-client-service.herokuapp.com/swagger-ui/#/
