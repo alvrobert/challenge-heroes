@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -45,8 +46,8 @@ public class ClientController {
     }
 
     @ResponseStatus(HttpStatus.OK)
-    @PostMapping("/update-client")
-    public ClientResponse<?> updateClient(@RequestBody @Valid ClientRequestDTO clientRequestDTO, @PathVariable BigInteger document) throws ClientException {
+    @PutMapping("/update-client")
+    public ClientResponse<?> updateClient(@RequestBody @Valid ClientRequestDTO clientRequestDTO) throws ClientException {
         return new ClientResponse<>("Succes", String.valueOf(HttpStatus.OK), "OK", clientService.createClient(clientRequestDTO));
     }
 
