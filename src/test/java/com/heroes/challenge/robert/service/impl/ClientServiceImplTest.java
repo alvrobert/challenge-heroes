@@ -39,5 +39,4 @@ class ClientServiceImplTest {
         String name = clientService.getClientByDocument(any()).getName();
         assertEquals("name", name);
     }
-
 }
